@@ -1,31 +1,15 @@
-/*
-fibonnacci series
-i/p = n
-o/p = nth fibonnacci number
-for example 
-i/p n = 5 , 0,1,1,2,3 
-o/p nth = 3
-*/
 #include<iostream>
+#include<algorithm>
+#include<vector>
 using namespace std;
-int fibonacci(int n){
-
-    int a=0;
-    int b=1;
-    for(int i =1;i<n;i++){
-        int NextNumber = a+b;
-        a=b;
-        b=NextNumber;
-        }
-        return a ;
-    }
-
-
-
 int main(){
-    int n;
-cout << "Enter the value of nth term" << endl;
-    cin >> n;
-    cout<<fibonacci(n);
-
+    vector<int>v;
+    v.push_back(1);
+    v.push_back(3);
+    v.push_back(6);
+    v.push_back(7);
+   cout<<"Finding 6->"<<binary_search(v.begin(),v.end(),6 )<<endl;
+    cout<<"lower bound->"<<lower_bound(v.begin(),v.end(),6 )-v.begin()<<endl; 
+    cout<<"upper bound->"<<upper_bound(v.begin(),v.end(),6 )-v.begin()<<endl;
 }
+ 
